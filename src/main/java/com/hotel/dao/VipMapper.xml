@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hotel.dao.VipMapper">
+
+    <insert id="addVip" parameterType="Vip">
+        insert into vip (Name,Sex,Card,Phone,V_Type,StartTime,EndTime,Account,Password)
+         values (#{Name},#{Sex},#{Card},#{Phone},#{V_Type},#{StartTime},#{EndTime},#{Account},#{Password});
+    </insert>
+
+    <delete id="deleteVipById" parameterType="int">
+        delete from vip
+        where id=#{id}
+    </delete>
+
+    <update id="updateVipById" parameterType="Vip">
+        update vip
+         set  Name=#{Name},Sex=#{Sex},Card=#{Card},Phone=#{Phone},V_Type=#{V_Type},StartTime=#{StartTime},EndTime=#{EndTime},Account=#{Account},Password=#{Password}
+        where id=#{id};
+    </update>
+
+    <select id="queryAllVip" resultType="Vip">
+        select *  from vip
+    </select>
+
+    <select id="queryVipById" resultType="Vip">
+        select * from vip
+        where id=#{id};
+    </select>
+
+    <select id="queryVipByPhone" resultType="Vip">
+         select * from vip
+        where phone=#{phone};
+    </select>
+
+    <select id="queryVipByAccount" resultType="Vip">
+        select * from vip
+        where account=#{account};
+    </select>
+
+    <select id="findByLogin" resultType="Vip">
+        select * from vip
+        where account=#{account} and password=#{password};
+    </select>
+</mapper>

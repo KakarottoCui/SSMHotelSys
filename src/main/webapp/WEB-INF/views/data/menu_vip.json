@@ -1,0 +1,21 @@
+[{
+    "name": "首页",
+    "icon": "&#xe68e;",
+    "url": "/jump/vip_index",
+    "hidden": false,
+    "list": []
+}, {
+    "name": "房间列表",
+    "icon": "&#xe62e;",
+    "url": "",
+    "hidden": true,
+    "list": [ {
+        "name": "房间列表",
+        "url": "/vip/home/list"
+    }]
+}, {
+    "name": "退出登录",
+    "icon": "&#xe65c;",
+    "url": "/jump/vip_exit",
+    "list": []
+}]

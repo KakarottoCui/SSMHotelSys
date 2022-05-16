@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hotel.dao.HomeMapper">
+
+    <insert id="addHome" parameterType="Home">
+        insert into home (Num,H_Type,Price,State,Img,Text)
+         values (#{Num},#{H_Type},#{Price},#{State},#{Img},#{Text});
+    </insert>
+
+    <delete id="deleteHomeById" parameterType="int">
+        delete from home
+        where id=#{id}
+    </delete>
+
+    <update id="updateHomeById" parameterType="Home">
+        update  home
+        set  Num=#{Num},H_Type=#{H_Type},Price=#{Price},State=#{State},Img=#{Img},Text=#{Text}
+         where id=#{id};
+    </update>
+
+    <select id="queryHomeById" resultType="Home">
+        select * from home
+        where id=#{id};
+    </select>
+
+    <select id="queryAllHome" resultType="Home">
+        select * from home
+    </select>
+
+    <select id="queryHomeByNum" resultType="Home">
+        select * from home
+        where num=#{num};
+    </select>
+
+    <update id="updateH_TypeById" parameterType="Home">
+        update  home
+        set State=#{State}
+         where id=#{id};
+    </update>
+
+</mapper>

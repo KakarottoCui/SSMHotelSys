@@ -1,0 +1,70 @@
+[{
+    "name": "首页",
+    "icon": "&#xe68e;",
+    "url": "/jump/index",
+    "hidden": false,
+    "list": []
+}, {
+    "name": "住客管理",
+    "icon": "&#xe612;",
+    "url": "",
+    "hidden": true,
+    "list": [{
+        "name": "住客入住",
+        "url": "/jump/guests_add"
+    }, {
+        "name": "住客列表",
+        "url": "/guests/list"
+    }]
+}, {
+    "name": "房间管理",
+    "icon": "&#xe62e;",
+    "url": "",
+    "hidden": true,
+    "list": [ {
+        "name": "房间列表",
+        "url": "/home/list"
+    }]
+}, {
+    "name": "会员管理",
+    "icon": "&#xe735;",
+    "url": "",
+    "hidden": true,
+    "list": [{
+        "name": "新增会员",
+        "url": "/jump/vip_add"
+    }, {
+        "name": "会员列表",
+        "url": "/vip/list"
+    }]
+}, {
+    "name": "系统设置",
+    "icon": "&#xe620;",
+    "url": "",
+    "hidden": true,
+    "list": [{
+        "name": "网站信息",
+        "url": "/jump/web_index"
+    }, {
+        "name": "修改密码",
+        "url": "/jump/pwd_update"
+    }, {
+        "name": "清除缓存",
+        "url": "/jump/web_cache"
+    }]
+}, {
+    "name": "数据表",
+    "icon": "&#xe62d;",
+    "url": "",
+    "hidden": true,
+    "list": [
+        {
+            "name": "生成Excel表",
+            "url": "/jump/excel_down"
+        }]
+}, {
+    "name": "退出登录",
+    "icon": "&#xe65c;",
+    "url": "/jump/exit",
+    "list": []
+}]
